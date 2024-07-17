@@ -1,5 +1,4 @@
 import Logo from "./Logo";
-import MenuPrincipal from "./MenuPrincipal";
 import MenuUsusario from "./MenuUsuario";
 
 export default function Cabecalho (){

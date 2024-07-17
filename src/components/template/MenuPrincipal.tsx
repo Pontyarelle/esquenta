@@ -1,20 +1,22 @@
-import Link from "next/link";
+import { IconApiApp, IconApps, IconHexagon, IconHexagonNumber1, IconLayout2, IconNumber1 } from "@tabler/icons-react";
+import MenuItem from "./MenuItem";
 
-export default function MenuPrincipal(){
-    
-    function menuItem(texto: string, link: string){
-        return(
-            <Link href={link} className="hover:bg-purple-600 rounded-md px-4 py-2">{texto}</Link>
-        )
-    }
-    
+export default function MenuPrincipal(){  
     return (
         <aside className='w-80 bg-zinc-900'>
-            <nav className="flex flex-col p-5 gap-3">
-                {menuItem('Primeiro Componente', '/primeiro')}
-                {menuItem('flexbox', '/flexbox')}
-                {menuItem('Componente Página', '/pagina')}
-
+            <nav className="flex flex-col p-5">
+                <MenuItem link="/primeiro">
+                    <IconHexagonNumber1></IconHexagonNumber1>
+                    <span>Primeiro Componente</span>
+                </MenuItem>
+                <MenuItem link="/flexbox">
+                    <IconLayout2></IconLayout2>
+                    <span>Flex Box</span>
+                </MenuItem>
+                <MenuItem link="/pagina">
+                    <IconApps></IconApps>
+                    <span>Componente Página</span>
+                </MenuItem>
             </nav>
         </aside>
     )

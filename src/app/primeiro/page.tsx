@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Pagina from "@/components/template/Pagina"
 
 export default function Primeiro (){
     
@@ -28,7 +28,8 @@ export default function Primeiro (){
     }
 
     return (
-        <div>
+        <Pagina>
+            <div>
             {titulo}
             <div className="flex flex-col">
                 <span>{1+1}</span>
@@ -40,5 +41,6 @@ export default function Primeiro (){
                 <span>{PI * Math.pow(raio, 2)}</span>
             </div>
         </div>
+        </Pagina>     
     )
 }
